@@ -1,0 +1,9 @@
+<ul>
+
+<% @clubs.each do |club| %>
+
+<h3><%= club.name %>: <%= club.rating %> stars</h3>
+<img src="<%= club.image_url %>">
+<p><%= club.description %></p>
+<% end %>
+</ul>
