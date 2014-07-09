@@ -1,6 +1,17 @@
-<ul>
 
-<% @clubs.each do |club| %>
+<h2>Add to the archive:</h2>
+
+<form action="/clubs" method="post">
+<p><input type="text" name="name" placeholder="New venue name" />
+<input type="text" name="image_url" placeholder="Enter a club image URL" />
+<input type="text" name="description" placeholder="Enter a brief description" />
+<input type="text" name="rating" placeholder="Rating (from 1-5)" />
+
+<div class="button">
+  <input type="submit" value="Add listing" />
+</div>
+
+<% @clubs.reverse_each do |club| %>
 
 <h3><%= club.name %>: <%= club.rating %> stars</h3>
 <img src="<%= club.image_url %>">

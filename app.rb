@@ -14,3 +14,20 @@ get '/'  do
   @clubs = Club.all
   erb :index
 end
+
+post '/clubs' do
+  name = params[:name]
+  image_url = params[:image_url]
+  description = params[:description]
+  rating = params[:rating]
+
+  Club.create(
+    name: name,
+    image_url: image_url,
+    description: description,
+    rating: rating
+  )
+
+  redirect "/"
+
+end
