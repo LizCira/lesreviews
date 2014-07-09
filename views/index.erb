@@ -16,5 +16,8 @@
 <h3><%= club.name %>: <%= club.rating %> stars</h3>
 <img src="<%= club.image_url %>">
 <p><%= club.description %></p>
+
+<a href="/clubs/<%= club.id %>/delete">delete</a>
+
 <% end %>
 </ul>

@@ -29,5 +29,11 @@ post '/clubs' do
   )
 
   redirect "/"
+end
 
+get '/clubs/:id/delete' do
+  club_id = params[:id]
+  club = Club.find(club_id)
+  club.destroy
+  redirect "/"
 end
