@@ -1,5 +1,8 @@
 require 'sinatra'
-require 'sinatra/reloader'
-require 'active_record'
-require 'pg'
+require 'sinatra/activerecord'
+
+ActiveRecord::Base.establish_connection({
+  database: "les_clubs",
+  adapter: "postgresql"
+})
 
