@@ -2,14 +2,15 @@
 <h2>Add to the archive:</h2>
 
 <form action="/clubs" method="post">
-<p><input type="text" name="name" placeholder="New venue name" />
-<input type="text" name="image_url" placeholder="Enter a club image URL" />
-<input type="text" name="description" placeholder="Enter a brief description" />
-<input type="text" name="rating" placeholder="Rating (from 1-5)" />
+<p><input type="text" name="name" size="40" placeholder="New venue name" />
+<input type="text" name="image_url" size="40" placeholder="Enter a club image URL" />
+<input type="text" name="description" size="40" placeholder="Enter a brief description" />
+<input type="text" name="rating" size="25" placeholder="Rating (from 1-5)" />
 
 <div class="button">
   <input type="submit" value="Add listing" />
 </div>
+</form>
 
 <% @clubs.reverse_each do |club| %>
 
@@ -17,7 +18,7 @@
 <img src="<%= club.image_url %>">
 <p><%= club.description %></p>
 
-<a href="/clubs/<%= club.id %>/delete">delete</a>
+<a href="/clubs/<%= club.id %>/edit">Edit</a> || <a href="/clubs/<%= club.id %>/delete">Delete</a>
 
 <% end %>
 </ul>

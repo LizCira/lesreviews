@@ -1,0 +1,11 @@
+<form action="/clubs/<%= @club.id %>" method="post">
+<input type="hidden" name="_method" value="put" />
+<p>Club name:<input type="text" name="name" size="40" value="<%= @club.name %>" /></p>
+<p>Image link: <input type="text" name="image_url" size="40" value="<%= @club.image_url %>" /></p>
+<p>Description: <input type="text" name="description" size="40" value="<%= @club.description %>" /></p>
+<p>Rating: <input type="text" name="rating" size="25" value="<%= @club.rating %> stars" /></p>
+
+<div class="button">
+  <input type="submit" value="Confirm edits" />
+</div>
+</form>
